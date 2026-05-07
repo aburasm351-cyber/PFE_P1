@@ -34,6 +34,20 @@ export const ENUM_TRANSLATIONS: Record<string, Record<string, Record<Language, s
     RESOLVED: { en: "Resolved", fr: "Résolu", ar: "تم الحل" },
     REJECTED: { en: "Rejected", fr: "Rejeté", ar: "مرفوض" },
     CONVERTED_TO_WORK_ORDER: { en: "In WO", fr: "En OT", ar: "في أمر عمل" },
+    // Task statuses
+    TODO: { en: "To Do", fr: "À faire", ar: "للقيام به" },
+    DONE: { en: "Done", fr: "Terminé", ar: "منجز" },
+    PASS: { en: "Pass", fr: "Réussi", ar: "ناجح" },
+    FAIL: { en: "Fail", fr: "Échoué", ar: "فاشل" },
+    BLOCKED: { en: "Blocked", fr: "Bloqué", ar: "معطل" },
+    APPROVED: { en: "Approved", fr: "Approuvé", ar: "موافق عليه" },
+    SCHEDULED: { en: "Scheduled", fr: "Planifié", ar: "مجدول" },
+    VALIDATED: { en: "Validated", fr: "Validé", ar: "تم التحقق" },
+    CANCELLED: { en: "Cancelled", fr: "Annulé", ar: "ملغى" },
+    ON_HOLD: { en: "On Hold", fr: "En attente", ar: "معلق" },
+    // Regulatory plan statuses
+    DUE_SOON: { en: "Due Soon", fr: "Bientôt dû", ar: "قريب الاستحقاق" },
+    UPCOMING: { en: "Upcoming", fr: "À venir", ar: "قادم" },
   },
   priority: {
     CRITICAL: { en: "Critical", fr: "Critique", ar: "حرجة" },
@@ -66,6 +80,36 @@ export const ENUM_TRANSLATIONS: Record<string, Record<string, Record<Language, s
     HIGH: { en: "High Risk", fr: "Risque élevé", ar: "خطر عالٍ" },
     MEDIUM: { en: "Medium Risk", fr: "Risque moyen", ar: "خطر متوسط" },
     LOW: { en: "Low Risk", fr: "Risque faible", ar: "خطر منخفض" },
+  },
+  criticality: {
+    CRITICAL: { en: "Critical", fr: "Critique", ar: "حرج" },
+    HIGH: { en: "High", fr: "Élevé", ar: "عالي" },
+    MEDIUM: { en: "Medium", fr: "Moyen", ar: "متوسط" },
+    LOW: { en: "Low", fr: "Faible", ar: "منخفض" },
+  },
+  classification: {
+    BIOMEDICAL: { en: "Biomedical", fr: "Biomédical", ar: "طبي حيوي" },
+    TECHNICAL: { en: "Technical", fr: "Technique", ar: "تقني" },
+    IT: { en: "IT", fr: "Informatique", ar: "تقنية المعلومات" },
+    IMAGING: { en: "Imaging", fr: "Imagerie", ar: "تصوير" },
+    LABORATORY: { en: "Laboratory", fr: "Laboratoire", ar: "مختبر" },
+    LIFE_SUPPORT: { en: "Life Support", fr: "Assistance vitale", ar: "دعم الحياة" },
+    MONITORING: { en: "Monitoring", fr: "Surveillance", ar: "مراقبة" },
+    SURGICAL: { en: "Surgical", fr: "Chirurgical", ar: "جراحي" },
+    NEONATAL: { en: "Neonatal", fr: "Néonatal", ar: "حديثي الولادة" },
+    DENTAL: { en: "Dental", fr: "Dentaire", ar: "أسنان" },
+    OPHTHALMOLOGY: { en: "Ophthalmology", fr: "Ophtalmologie", ar: "طب العيون" },
+    ENT: { en: "ENT", fr: "ORL", ar: "أنف وأذن وحنجرة" },
+    REHABILITATION: { en: "Rehabilitation", fr: "Rééducation", ar: "إعادة تأهيل" },
+    STERILIZATION: { en: "Sterilization", fr: "Stérilisation", ar: "تعقيم" },
+    INFORMATION_SYSTEM: { en: "Information System", fr: "Système d'information", ar: "نظام معلومات" },
+    LOGISTICS: { en: "Logistics", fr: "Logistique", ar: "لوجستيات" },
+  },
+  recurrenceUnit: {
+    DAYS: { en: "Days", fr: "Jours", ar: "أيام" },
+    WEEKS: { en: "Weeks", fr: "Semaines", ar: "أسابيع" },
+    MONTHS: { en: "Months", fr: "Mois", ar: "أشهر" },
+    YEARS: { en: "Years", fr: "Années", ar: "سنوات" },
   }
 }
 
