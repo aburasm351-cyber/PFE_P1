@@ -4,21 +4,23 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { LayoutDashboard, Calendar, BarChart3, Kanban } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useI18n } from "@/lib/i18n"
 
 export default function PlanningLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
+  const { t } = useI18n()
 
   const tabs = [
-    { name: "Kanban Board", href: "/planning/kanban", icon: Kanban },
-    { name: "Calendar View", href: "/planning/calendar", icon: Calendar },
+    { name: t('kanbanBoard'), href: "/planning/kanban", icon: Kanban },
+    { name: t('calendarView'), href: "/planning/calendar", icon: Calendar },
   ]
 
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between border-b border-border pb-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Planning & Scheduling</h1>
-          <p className="text-muted-foreground">Manage work order lifecycle and resource allocation.</p>
+          <h1 className="text-3xl font-bold tracking-tight">{t('planningScheduling')}</h1>
+          <p className="text-muted-foreground">{t('manageWorkOrderLifecycle')}</p>
         </div>
       </div>
 

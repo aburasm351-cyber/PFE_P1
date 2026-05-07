@@ -1027,22 +1027,22 @@ export default function WorkOrderDetailPage() {
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                    <CardTitle className="text-lg flex items-center gap-2">
                       <Package className="h-5 w-5 text-primary" />
-                      Parts Consumed
+                      {t('partsConsumed')}
                    </CardTitle>
                    {(isManager || isAssignedTech) && (
-                      <Button size="sm" variant="outline" className="h-8" onClick={() => setIsPartsDialogOpen(true)}><Plus className="h-3.5 w-3.5 mr-1" /> Add Part</Button>
+                      <Button size="sm" variant="outline" className="h-8" onClick={() => setIsPartsDialogOpen(true)}><Plus className="h-3.5 w-3.5 mr-1" /> {t('addPart')}</Button>
                    )}
                 </CardHeader>
                 <CardContent>
                    <div className="space-y-4">
                       {partUsages.length === 0 ? (
-                        <p className="text-sm text-muted-foreground italic text-center py-10">Use the "Add Part" button to search inventory and link parts to this work order.</p>
+                        <p className="text-sm text-muted-foreground italic text-center py-10">{t('useAddPartButton')}</p>
                       ) : (
                         <div className="space-y-3">
                            {partUsages.map(usage => (
                              <div key={usage.usageId} className="flex items-center justify-between p-3 border border-border/40 rounded-xl bg-card hover:bg-muted/5 transition-colors">
                                 <div>
-                                   <p className="text-sm font-medium">{usage.partName || "Unknown Part"}</p>
+                                   <p className="text-sm font-medium">{usage.partName || t('unknownPart')}</p>
                                    <p className="text-xs text-muted-foreground">Qty: {usage.quantityUsed} | Unit Cost: ${usage.unitCostAtUsage?.toFixed(2) || "0.00"}</p>
                                    {usage.taskId && (
                                      <Badge variant="outline" className="text-[9px] h-4 bg-muted/50 p-1 px-2 border-none mt-1">
